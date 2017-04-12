@@ -1,0 +1,39 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+      <h3>All Movies</h3>
+    </div>
+    <div class="col-xs-2 col-xs-offset-7">
+      <button type="button" class="btn btn-default btn-sm"><a href="/movies/new">New Movie</a></button>
+    </div>
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Director</th>
+        <th>Year</th>
+        <th>Rating</th>
+        <th>Poster</th>
+        <th></th>
+        <th></th>
+      </tr>
+      {{#each allMovies}}
+      <tr>
+        <td><a href="http://localhost:3000/movies/{{this.id}}">{{this.title}}</a></td>
+        <td>{{this.director}}</td>
+        <td>{{this.year}}</td>
+        <td>{{this.rating}}</td>
+        <td><a href="{{this.poster_url}}"><img class="allMoviesImg" src="{{this.poster_url}}" alt=""></a></td>
+
+        <form method="POST" action="/movies/{{this.id}}?_method=DELETE">        
+          <td><button type="submit" class="btn btn-default btn-sm">Delete Movie</button>
+          </td>
+        </form>
+
+        <td><button type="button" class="btn btn-default btn-sm">Edit</button></td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>

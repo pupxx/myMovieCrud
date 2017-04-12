@@ -1,0 +1,21 @@
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-4">
+      <img src="{{singleMovie.poster_url}}" alt="">
+
+    </div>
+    <div class="col-xs-4 col-xs-offset-1">
+      <h1>Title:{{singleMovie.title}}</h1>
+      <h6>Year: {{singleMovie.year}}</h6>
+      <h6>Rating:{{singleMovie.rating}}</h6>
+      <form method="POST" action="/movies/{{singleMovie.id}}?_method=DELETE">
+        <td><button type="submit" class="btn btn-default btn-sm">Delete Movie</button>
+        </td>
+      </form>
+    </div>
+  </div>
+
+</div>

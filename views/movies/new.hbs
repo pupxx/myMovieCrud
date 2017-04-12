@@ -1,0 +1,31 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <a href="/movies">Go To All Movies</a>
+      <form method="POST" action="/snacks">
+        <div class="form-group">
+          <label for="movieTitle">Movie Title</label>
+          <input type="text" name="title" class="form-control" id="movieTitle" placeholder="title">
+        </div>
+        <div class="form-group">
+          <label for="movieTitle">Director</label>
+          <input type="text" name="director" class="form-control" id="movieDirector" placeholder="director">
+        </div>
+        <div class="form-group">
+          <label for="movieYear">Year</label>
+          <input type="text" name="year" class="form-control" id="movieYear" placeholder="Movie year">
+        </div>
+        <div class="form-group">
+          <label for="movieRating">Movie Rating</label>
+          <input type="number" name="rating" min="0" max="5" id="movieRating">
+        </div>
+        <div class="form-group">
+          <label for="moviePoster">Movie Poster</label>
+          <input type="text" name="poster" id="moviePoster">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
