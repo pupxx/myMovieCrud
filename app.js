@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var movies = require('./routes/movies');
 var methodOverride = require('method-override')
+var hbs = require('hbs');
+
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 var app = express();
 
